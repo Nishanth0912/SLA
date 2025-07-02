@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Task 2</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body style="background-color: #00a884;">
+
+    <form action="/form" method="post">
+        <h1 style="color:white;">Contact form</h1>
+        <p style="color:white;">Please Fill in your Information and we'll be sending your order in no time</p> <br><br>
+        <label for="name" style="color:white;">Your Name</label>&emsp;&emsp;&emsp;&emsp;
+        <input type="text" name="name" id="name" placeholder="First name" size="20" required>&emsp;
+        <input type="text" name="name" id="name" placeholder="Last name" size="20" required><br><br>
+
+        <label for="email" style="color:white;">Your Email</label>&emsp;&emsp;&emsp;&emsp;
+        <input type="email" name="email" id="email" placeholder="eg.hello@gmail.com" size="48"> <br><br>
+
+        <label for="phone" style="color:white;">Phone*</label>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+        <input type="tel" name="phone" id="phone" placeholder="+91" size="12">
+        <input type="tel" name="phone" id="phone" placeholder="09876" size="12">
+        <input type="tel" name="phone" id="phone" placeholder="54321" size="12"> <br><br>
+
+        <label for="subject" style="color:white;">Message Subject*</label>&emsp;
+        <select name="subject" id="subject" style="width: 24%;height: 23px;">
+            <option value="">--Select--</option>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+            <option value="Dotnet">Dotnet</option>
+            <option value="MERN">MERN</option>
+            <option value="MEAN">MEAN</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <label for="message" style="color:white;">Message*</label>&emsp;&emsp;&emsp;&emsp;
+        <textarea name="message" id="message" cols="47" rows="0"></textarea><br><br>
+
+        <!-- <label for="verify" style="color:white;">Verification*</label>&emsp; -->
+        <div class="g-recaptcha" data-sitekey="6Ld47XQrAAAAAA2AI6nHY82kYmPldkoth9dRQV70"></div>
+        <hr>
+
+        <input type="button" value="SUBMIT NOW">
+    </form>
+    </div>
+</body>
+
+</html>
