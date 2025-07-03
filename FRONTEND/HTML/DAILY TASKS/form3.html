@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <h1>Create Your Account</h1>
+    <p style="color: red;">Required Information*</p>
+
+    <form action="/submit" method="post">
+        <h2 style="background-color: gray;">Basic Information</h2>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<label for="email">Email&nbsp;<span
+                style="color: red;">*</span></label>
+        <input type="email" name="email" id="email" size="30" required><br><br>
+
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label
+            for="password">password&nbsp;<span style="color: red;">*</span></label>
+        <input type="password" name="password" id="password" size="30" required><br><br>
+
+        &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="rpassword">Retype
+            password&nbsp;<span style="color: red;">*</span></label>
+        <input type="rpassword" name="rpassword" id="rpassword" size="30" required><br><br>
+
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;<label for="fname">First Name&nbsp;<span
+                style="color: red;">*</span></label>
+        <input type="text" name="fname" id="fname" size="30" required><br><br>
+
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;<label for="lname">Last Name&nbsp;<span
+                style="color: red;">*</span></label>
+        <input type="text" name="lname" id="lname" size="30" required><br><br>
+
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="phone">Phone Number&nbsp;<span
+                style="color: red;">*</span></label>
+        <input type="text" name="phone" id="phone" placeholder="999-999-9999" size="30" required><br><br>
+
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;<label for="address">Address&nbsp;<span
+                style="color: red;">*</span></label>
+        <input type="text" name="address" id="address" size="30" required><br><br>
+
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<label for="city">City&nbsp;<span
+                style="color: red;">*</span></label>
+        <input type="text" name="city" id="city" size="30" required><br><br>
+
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;<label
+            for="state">State&nbsp;<span style="color: red;"><b>^</b></span></label>
+        <select name="state" id="state">
+            <option value="">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;--Select--</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Keralam">Keralam</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Karnataka">Karnataka</option>
+        </select><br><br>
+
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;<label for="country">Country&nbsp;<span
+                style="color: red;"><b>^</b></span></label>
+        <input type="text" name="country" id="country" size="30" required><br><br>
+
+        <h2 style="background-color:gray;">Education</h2>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;<label
+            for="school">School&nbsp;<span style="color: red;">*</span></label>
+        <input type="text" name="school" id="school" size="30" required><br><br>
+
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<label for="program">Program&nbsp;<span
+                style="color: red;">*</span></label>
+        <input type="text" name="program" id="country" size="30" required><br><br>
+
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<label for="education">Education Level&nbsp;<span
+                style="color: red;">*</span></label>
+        <select name="education" id="education">
+            <option value="">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;--Select--</option>
+            <option value="SSLC">SSLC</option>
+            <option value="HSC">HSC</option>
+            <option value="UG">UG</option>
+            <option value="Other">Other</option>
+        </select>
+        <table>
+            <tr>
+                <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</td>
+                <td>
+                    <fieldset>
+                        <legend>Education Status</legend>
+                        <input type="radio" name="estatus" id="estatus"
+                            size="20"><label>Graduated&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label><br>
+                        <input type="radio" name="estatus" id="estatus"><label>Current Enrolled</label><br>
+                        <input type="radio" name="estatus" id="estatus"><label>Did Not Graduate</label>
+                    </fieldset>
+                </td>
+            </tr>
+        </table>
+
+        <br><br>
+
+        <h2 style="background-color: gray;">Work Experience</h2>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="employer">Employer :</label>
+        <input type="text" name="employer" id="employer" size="30"><br><br>
+
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;<label for="jobtitle">Job Title :</label>
+        <input type="text" name="jobtitle" id="jobtitle" size="30"><br><br>
+
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<label for="jobduty">Job Duty :</label>
+        <input type="text" name="jobduty" id="jobduty" size="30"><br><br>
+
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;<label for="workedyear">Worked Year :</label>
+        <input type="text" name="workedyear" id="workedyear" size="30"><br><br>
+
+        <h2 style="background-color: gray;">Attachments</h2>
+        &emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="attachments">Attachments:</label>
+        <input type="file" name="attachments" id="attachments"><br><br>
+
+        &emsp;&emsp;&emsp; &emsp;&emsp;&emsp; &emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input
+            type="button" value="Reset" style="background-color:red;color: white;">
+        &nbsp;&emsp;<input type="button" value="Apply" style="background-color:red;color: white;">
+
+    </form>
+
+</body>
+
+</html>
