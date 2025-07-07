@@ -1,0 +1,35 @@
+/* 1.Universal Selector */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Tagname Selector */
+h1{
+    color: cadetblue;
+
+}
+p{
+    font-size: 32px;
+}
+
+/* 3.ID name Selector */
+#para{
+    color: blue;
+}
+
+
+/* 4. Class Name Selector */
+.para{
+    color: tomato;
+}
+
+
+/* 5.Grouping Selector */
+p,h1 , div ,.para{
+    background-color: violet;
+}
+
+
+
