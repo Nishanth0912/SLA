@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aquamarine;
+}
+.container{
+    margin: 20px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* column-gap: 10px; */
+    /* row-gap: 10px; */
+    gap: 50px 10px;
+}
+
+.container>div {
+  /* height: 50px; */
+  padding: 15px;
+  background-color: orange;
+  text-align: center;
+  border: 2px solid black;
+  
+}
