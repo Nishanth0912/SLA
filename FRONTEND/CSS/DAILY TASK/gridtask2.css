@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.layout{
+    display: grid;
+    background-color: white;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 10vh 58vh 10vh 10vh;
+    gap: 10px;
+    margin: 20px;
+}
+.item{
+    background-color: yellowgreen;
+    display: grid;
+    padding: 10px;
+   /* justify-content: start; */
+}
+.item-1{
+   grid-column: span 1;
+    grid-row: span 4;
+}
