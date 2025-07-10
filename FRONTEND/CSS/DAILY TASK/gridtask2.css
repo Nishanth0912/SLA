@@ -16,7 +16,6 @@
     background-color: yellowgreen;
     display: grid;
     padding: 10px;
-   /* justify-content: start; */
 }
 .item-1{
    grid-column: span 1;
