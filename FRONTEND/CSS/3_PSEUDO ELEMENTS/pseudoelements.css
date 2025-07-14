@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+h1{
+    position: relative;
+    width: max-content;
+}
+h1::before{
+    content: '';
+    background-color: red;
+    border: 2px solid green;
+    height: 5px;
+    width: 100%;
+    position:absolute;
+    bottom: 0px;
+    left: 0px;
+}
