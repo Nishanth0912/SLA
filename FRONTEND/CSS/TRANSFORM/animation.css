@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.outer1,.outer2{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    gap: 40px;
+    border-bottom: 2px solid black;
+}
+
+.outer1>.inner1{
+    height: 200px;
+    width: 200px;
+    border:1px solid black ;
+}
+
+.outer1>.inner1>.box1{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(201, 44, 4);
+    animation-name: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    position: relative;
+    animation-direction: alternate;
+}
+
+@keyframes move {
+    from{
+       transform: translateX(0px);
+       opacity: 0;
+    }
+
+    to{
+        transform: translateX(150px);
+        opacity: 1;
+        /* left: 100px; */
+    }
+}
+
+.outer1>.inner2{
+    height: 200px;
+    width: 200px;
+    border:1px solid black ;
+}
+
+.outer1>.inner2>.box2{
+    background-color: steelblue;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    position: relative;
+    animation: rotate 1s ease-in  infinite;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+        background-color: sandybrown;
+    }
+}
+
+.outer1>.inner3{
+    height: 200px;
+    width: 200px;
+    border:1px solid black ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer1>.inner3>.box3{
+height: 50px;
+width: 50px;
+/* background-color: yellow; */
+border-radius: 50%;
+border-top: 3px solid green;
+animation: spinner 2s  linear infinite;
+}
+
+@keyframes spinner {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+.outer2>.inner1{
+    width: 200px;
+    height: 200px;
+    /* background-color: gray; */
+    border-radius: 50%;
+    border: 2px solid gray;
+    animation: solar 3s linear infinite;
+}
+
+
+.outer2>.inner1>.box1{
+    width: 50px;
+    height: 50px;
+    border: 2px solid red;
+    border-radius:50%; 
+    animation: solar 3s linear infinite;
+}
+
+@keyframes solar {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.outer2>.inner2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.outer2>.inner2>.circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /* background-color: white; */
+    animation: up-down 2s ease-in  infinite alternate; 
+}
+
+.circle-1{
+    background-color: white;
+}
+.circle-2{
+    animation-delay: 0.1s !important;
+    background-color: tomato;
+}
+
+.circle-3{
+    animation-delay: 0.2s !important;
+    background-color: green;
+}
+
+.circle-4{
+    animation-delay: 0.3s !important;
+    background-color: steelblue;
+}
+
+.circle-5{
+    animation-delay: 0.4s !important;
+    background-color: violet;
+}
+
+@keyframes up-down {
+    from{
+        transform: translateY(-30px);
+    }
+    to{
+        transform: translateY(30px);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+}
+

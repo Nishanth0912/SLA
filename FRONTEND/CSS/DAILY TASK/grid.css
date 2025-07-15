@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 1500px;
+    margin: 20px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    gap: 20px;
+}
+
+.same {
+    width: 500px;
+    height: 200px;
+    border: 2px solid black;
+    padding: 50px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.item-1 {
+    background-color: aquamarine;
+}
+
+.item-2 {
+    background-color: bisque;
+}
+
+.item-3 {
+    background-color: blueviolet;
+}
+
+.item-4 {
+    background-color: tomato;
+}
+
+.item-5 {
+    background-color: violet;
+}
+
+.item-6 {
+    background-color: lightsalmon;
+}
+
+.item-7 {
+    background-color: gray;
+}
+
+.item-8 {
+    background-color: teal;
+}
+
+.item-9 {
+    background-color: gold;
+}

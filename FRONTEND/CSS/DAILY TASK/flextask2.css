@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer {
+    width: 800px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px dashed gray;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.outer>.box {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border-radius: 20px;
+}
+
+.box.box-2 {
+    background-color: green;
+}
