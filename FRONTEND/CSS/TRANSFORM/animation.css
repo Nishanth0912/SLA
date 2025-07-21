@@ -104,7 +104,7 @@ animation: spinner 2s  linear infinite;
     /* background-color: gray; */
     border-radius: 50%;
     border: 2px solid gray;
-    animation: solar 3s linear infinite;
+    animation: solar 3s linear infinite alternate-reverse;
 }
 
 
@@ -113,7 +113,7 @@ animation: spinner 2s  linear infinite;
     height: 50px;
     border: 2px solid red;
     border-radius:50%; 
-    animation: solar 3s linear infinite;
+    /* animation: solar 3s linear infinite; */
 }
 
 @keyframes solar {
