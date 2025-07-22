@@ -35,4 +35,6 @@ function validateform(){
      usernameInput.style.border="1px solid green";
      alert("Form Submitted Succesfully");
     return true;
+
+    // untill name and password
 }
