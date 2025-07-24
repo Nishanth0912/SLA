@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        .container{
+            padding: 25px;
+            width: 400px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Simple Calci</h1>
+    <label for="num1">1st Number :</label>
+    <input type="number" name="num1" id="num1" placeholder="Enter the First Number"> <br> <br>
+
+    <label for="num2">2nd Number :</label>
+    <input type="number" name="num2" id="num2" placeholder="Enter the Second Number"> <br> <br>
+
+    <button onclick="multiply()">Multiply</button>
+
+    <button onclick="division()">Divide</button>
+
+    <p id="id1"></p>
+    </div>
+    <script src="./multiply_division.js"></script>
+</body>
+
+</html>

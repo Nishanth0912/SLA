@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade</title>
+
+    <style>
+        .container{
+           padding: 25px;
+           width: 400px;
+           height: 200px;
+           border: 1px solid black;
+       }
+   </style>
+</head>
+<body>
+     <div class="container">
+        <h1>Grade Calculator</h1>
+        <label for="mark">Enter the Mark :</label>
+        <input type="number" name="mark" id="mark"> <br> <br>
+        
+        <label for="choose">Choose :</label>
+        <input type="radio" name="type" id="normal" value="normal"><span>Normal Exam</span>
+        <input type="radio" name="type" id="final" value="final"><span>Final Exam</span> <br><br>
+        
+         <button onclick="check()">Show Result</button>
+         <p id="result"></p>
+     </div>
+    <script src="./mark.js"></script>
+</body>
+</html>

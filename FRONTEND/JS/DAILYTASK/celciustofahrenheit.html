@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celcius to Fahrenheit</title>
+    <style>
+         .container{
+            padding: 25px;
+            width: 400px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Degree Converter</h1>
+        <label for="value">Enter The Degree : </label>
+        <input type="number" name="degree" id="degree" placeholder="Enter the Degree (without symbol)"> <br><br>
+
+        <button onclick="fahren()">Convert to Fahrenheit</button>
+        <button onclick="celcius()">Convert to Celcius</button>
+
+        <p id="res"></p>
+    </div>
+    <script src="./celciustofahrenheit.js"></script>
+</body>
+</html>
