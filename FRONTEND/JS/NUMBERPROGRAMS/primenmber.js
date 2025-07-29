@@ -1,13 +1,15 @@
-let str = "MALAYALAM";
-let temp = str;
-let palindrome = "";
+let a = [1,2,3,4,2]
+let b = []
+let c = []
 
-for (let i = str.length - 1; i >= 0; i--) {
-    palindrome += str[i];
+for(let i=0;i<a.length;i++){
+    for(let j=1;j<a.length;j++){
+        if(a[i] == a[j]){
+            a[j]+=0;
+        }
+    }
 }
 
-if (temp === palindrome) {
-    console.log("Palindrome");
-} else {
-    console.log("Not a palindrome");
+for(let i=0;i<a.length;i++){
+
 }
