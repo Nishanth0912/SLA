@@ -1,42 +1,50 @@
 use employee;
-create table employee_details 
-(empid Integer primary key,
-name varchar(20) not null,
-gender varchar(10) not null,
-dept varchar(10) not null,
-salary decimal(20) not null);
 
-select * from employee_details;
+
+
+drop table employee_details;
+
+
 
 rename table employee_details to employee;
 
 alter table employee
 add experience_in_years Integer not null;
 
+show tables;
 select * from employee;
-insert into employee (empid,name,gender,dept,salary,experience_in_years) 
-values (1,'nishanth','male','manager',120000,6),
-(2, 'Priya', 'Female', 'HR', 60000, 3),
-(3, 'Arun', 'Male', 'Developer', 80000, 4),
-(4, 'Divya', 'Female', 'Designer', 70000, 2),
-(5, 'Karthik', 'Male', 'Developer', 90000, 5),
-(6, 'Sneha', 'Female', 'Tester', 65000, 3),
-(7, 'Ravi', 'Male', 'Support', 55000, 2),
-(8, 'Meena', 'Female', 'HR', 62000, 3),
-(9, 'Vikram', 'Male', 'Manager', 110000, 7),
-(10, 'Aishwarya', 'Female', 'Developer', 95000, 6),
-(11, 'Manoj', 'Male', 'Tester', 70000, 4),
-(12, 'Lakshmi', 'Female', 'Support', 50000, 1),
-(13, 'Suresh', 'Male', 'Developer', 88000, 5),
-(14, 'Anjali', 'Female', 'Designer', 72000, 3),
-(15, 'Ramesh', 'Male', 'HR', 63000, 2),
-(16, 'Kavya', 'Female', 'Developer', 91000, 5),
-(17, 'Harish', 'Male', 'Manager', 115000, 8),
-(18, 'Deepa', 'Female', 'Tester', 68000, 4),
-(19, 'Surya', 'Male', 'Support', 52000, 2),
-(20, 'Janani', 'Female', 'Designer', 75000, 3);
 
+CREATE TABLE employee (
+    eid INT PRIMARY KEY,
+    name VARCHAR(50),
+    job VARCHAR(50),
+    salary INT,
+    experience INT,
+    did INT,
+    hiredate DATE
+);
 
+INSERT INTO employee (eid, name, job, salary, experience, did, hiredate) VALUES
+(101, 'John', 'Developer', 60000, 3, 5, '2021-01-15'),
+(102, 'Alice', 'HR Executive', 50000, 4, 1, '2020-07-20'),
+(103, 'David', 'Sales Rep', 45000, 2, 4, '2022-03-05'),
+(104, 'Priya', 'Clerk', 30000, 1, 2, '2023-11-10'),
+(105, 'Suresh', 'Developer', 65000, 3, 6, '2021-09-25'),
+(106, 'Meena', 'Manager', 80000, 5, 3, '2019-06-15'),
+(107, 'Arun', 'Developer', 62000, 1, 8, '2023-01-18'),
+(108, 'Deepa', 'Clerk', 31000, 2, 9, '2022-08-02'),
+(109, 'Ravi', 'HR Manager', 55000, 4, 10, '2020-10-10'),
+(110, 'Sneha', 'Manager', 75000, 3, 11, '2021-04-07'),
+(111, 'Karthik', 'Developer', 61000, 2, 12, '2023-05-20'),
+(112, 'Divya', 'Developer', 62000, 2, 13, '2023-03-12'),
+(113, 'Sathish', 'Developer', 59000, 3, 14, '2021-02-22'),
+(114, 'Keerthi', 'Developer', 60000, 2, 15, '2022-12-01'),
+(115, 'Vikram', 'Sales Rep', 46000, 4, 7, '2021-08-14'),
+(116, 'Latha', 'Clerk', 29000, 1, 17, '2023-06-01'),
+(117, 'Anand', 'Developer', 63000, 0, 18, '2024-01-09'),
+(118, 'Renu', 'Clerk', 30500, 2, 19, '2022-04-28'),
+(119, 'Ganesh', 'Developer', 64000, 3, 20, '2021-10-17'),
+(120, 'Bharath', 'Sales Rep', 47000, 1, 16, '2023-07-05');
 
 
 create table ProjectAssignments
@@ -96,6 +104,51 @@ INSERT INTO TrainingAttendance (empid, Training_code, passed) VALUES
 (19, 'T102', 'Yes'),
 (20, 'T101', 'Yes');
 
+
+
+CREATE TABLE dept (
+    dept_id INT PRIMARY KEY,
+    department_name VARCHAR(50),
+    location VARCHAR(50)
+);
+
+INSERT INTO dept (dept_id, department_name, location) VALUES
+(1, 'HR', 'New York'),
+(2, 'Finance', 'London'),
+(3, 'Sales', 'San Francisco'),
+(4, 'Marketing', 'Chicago'),
+(5, 'IT', 'Seattle'),
+(6, 'HR', 'Denver'),
+(7, 'R&D', 'Boston'),
+(8, 'Finance', 'Atlanta'),
+(9, 'Production', 'Houston'),
+(10, 'Marketing', 'Washington DC'),
+(11, 'Administration', 'Miami'),
+(12, 'Sales', 'Dallas'),
+(13, 'Procurement', 'Phoenix'),
+(14, 'Security', 'Las Vegas'),
+(15, 'Public Relations', 'San Diego'),
+(16, 'Business Development', 'Detroit'),
+(17, 'Training', 'Portland'),
+(18, 'Operations', 'Minneapolis'),
+(19, 'Compliance', 'Philadelphia'),
+(20, 'IT', 'Austin');
+
+-- More Developers
+UPDATE dept SET department_name = 'Developer' WHERE dept_id IN (1,3,5,7,9,11,13,15);
+
+-- Clerks
+UPDATE dept SET department_name = 'Clerk' WHERE dept_id IN (2,4,6,8);
+
+-- Sales
+UPDATE dept SET department_name = 'Sales' WHERE dept_id IN (10,12,14);
+
+-- HR
+UPDATE dept SET department_name = 'HR' WHERE dept_id IN (16,17,18);
+
+-- Managers
+UPDATE dept SET department_name = 'Manager' WHERE dept_id IN (19,20);
+
 select * from TrainingAttendance;
 
 
@@ -130,7 +183,7 @@ max(salary) as Maximum_Salary
 from employee
 group by dept;
 
-/* 6.Show departments where the total salary budget is over ₹2,500,000. */
+/* 6.Show departments where the total salary budget is over ₹2,50,000. */
 
 select dept
 from employee
@@ -138,9 +191,6 @@ group by dept
 having sum(salary) > 250000 ;
 
 /*7.For each project, find out how many hours have been logged across all employees.*/
-
-select *
-from ProjectAssignments;
 
 select project_id as project,sum(hours_spent)
 from ProjectAssignments
@@ -161,9 +211,103 @@ GROUP BY gender
 ORDER BY avg_salary DESC
 limit 1;
 
+select employee.*, salary
+from employee;
+
 /*10.Find the project with the highest total hours logged.*/
 select project_id as Project,sum(hours_spent) as Total_hours_logged
 from projectassignments
 group by project_id
 order by Total_hours_logged desc
 limit 1;
+
+select max(salary) as Second_Max_Salary,dept
+from employee
+group by dept
+order by Second_Max_Salary desc ; 
+
+select salary
+from employee
+order by salary desc limit 1 offset 2 ; 
+
+
+select max(salary) as Third_Max_salary
+from employee
+where salary <(select max(salary)
+from employee
+where salary <(select max(salary)
+from employee));
+
+select * from employee;
+select max(salary)
+from employee;
+commit;
+
+GRANT ALL PRIVILEGES
+ON employee.employee
+TO 'root'@'localhost';
+
+SHOW GRANTS FOR 'root'@'localhost';
+
+REVOKE ALL PRIVILEGES
+ON employee.employee
+FROM 'root'@'localhost';
+
+START TRANSACTION;
+SAVEPOINT before_update;
+UPDATE employee SET salary = salary + 1000 WHERE empid = 1;
+ROLLBACK TO SAVEPOINT before_update;
+COMMIT;
+
+select * from dept;
+
+select ename,department_name
+ from employee,dept
+ where employee.dept_id=dept.empid;
+
+SHOW TABLE STATUS LIKE 'employee';
+
+select * from dept;
+
+-- Q1. List all employees with their department names.
+select e.*,d.dname
+from employee e inner join dept d
+on e.did=d.did;
+
+-- Q2. Show department names along with the names of employees in those departments.
+select d.dname, group_concat(e.name separator ",") Employee
+from employee e inner join dept d
+on e.did = d.did
+group by d.dname;
+
+-- Q3.Count how many employees are in each department.
+SELECT d.dname,count(*)
+from dept d inner join employee e
+on e.did = d.did
+ group by dname;
+ 
+ -- Q4.Get details of employees who work in the "HR" department.
+ 
+ select *
+ from employee e inner join dept d
+ on e.did = d.did and d.dname ="hr";
+ 
+ -- Q5.Find the names of employees and their department IDs where both the employee and department exist
+select e.name,e.eid,d.dname
+from employee e inner join dept d
+on e.did = d.did;
+
+select * from employee;
+
+-- Q6.Get the names of employees along with department names, sorted by department name
+select group_concat(e.name separator ",") as employees ,d.dname as department
+from employee e inner join dept d
+on e.did = d.did 
+group by d.dname
+order by d.dname;
+
+
+
+
+
+
